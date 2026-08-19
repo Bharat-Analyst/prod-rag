@@ -1,0 +1,31 @@
+[project]
+name = "prod-rag"
+version = "0.1.0"
+description = "Hybrid-retrieval RAG over a corpus of ML papers, with cross-encoder reranking and Gemini answers."
+readme = "README.md"
+authors = [
+    { name = "BharatInProduct", email = "116033803+BharatInProduct@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+
+dependencies = [
+    # Core RAG pipeline
+    "langchain-core>=1.5.5",
+    "langchain-classic>=1.0.8",
+    "langchain-community>=0.4.2",
+    "langchain-text-splitters>=1.1.2",
+    "langchain-chroma>=1.1.0",
+    "langchain-huggingface>=1.2.2",
+    # Vector store & PDF parsing
+    "chromadb>=1.5.9",
+    "pymupdf>=1.28.2",
+    # Local embeddings + cross-encoder reranker
+    "sentence-transformers>=6.0.0",
+    # Sparse retrieval
+    "rank-bm25>=0.2.2",
+    # Answer generation
+    "google-genai>=2.18.1",
+    # App & config
+    "streamlit>=1.61.1",
+    "python-dotenv>=1.2.2",
+]

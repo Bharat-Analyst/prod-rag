@@ -1,0 +1,39 @@
+# Secrets — never commit
+.env
+.env.local
+
+# Source PDFs: may be copyrighted, keep them out of the repo
+corpus/
+
+# Persisted vector index (~50MB, regenerate with `uv run rag.py`)
+chroma-db/
+
+# Model caches (embedding / reranker weights)
+.cache/
+.huggingface/
+huggingface/
+hf_cache/
+*.safetensors
+*.bin
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

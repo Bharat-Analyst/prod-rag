@@ -1,0 +1,30 @@
+# Pinned to the versions this project was developed and tested against.
+# Install with:  pip install -r requirements.txt
+# (uv users: `uv sync` uses pyproject.toml + uv.lock instead.)
+
+# --- Core RAG pipeline ---
+langchain-core==1.5.5
+langchain-classic==1.0.8          # EnsembleRetriever, reranker wrappers (LangChain 1.0 split)
+langchain-community==0.4.2        # BM25Retriever, PyMuPDFLoader, cross-encoder wrapper
+langchain-text-splitters==1.1.2
+langchain-chroma==1.1.0
+langchain-huggingface==1.2.2
+
+# --- Vector store & PDF parsing ---
+chromadb==1.5.9
+pymupdf==1.28.2
+
+# --- Local embeddings (all-MiniLM-L6-v2) & reranker (bge-reranker-base) ---
+sentence-transformers==6.0.0
+transformers==5.15.0
+torch==2.13.0
+
+# --- Sparse retrieval ---
+rank-bm25==0.2.2
+
+# --- Answer generation ---
+google-genai==2.18.1
+
+# --- App & config ---
+streamlit==1.61.1
+python-dotenv==1.2.2
